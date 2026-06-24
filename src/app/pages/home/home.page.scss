@@ -1,0 +1,168 @@
+ion-toolbar {
+  --background: var(--lm-bg);
+  --border-width: 0;
+}
+
+.app-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--lm-primary);
+
+  .app-logo {
+    font-size: 20px;
+  }
+}
+
+.home-content {
+  --background: var(--lm-bg);
+}
+
+.profile-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 16px 16px 8px;
+  padding: 16px;
+  background: var(--lm-surface);
+  border-radius: 18px;
+  border: 0.5px solid var(--lm-border);
+  cursor: pointer;
+  transition: opacity 0.15s;
+
+  &:active { opacity: 0.7; }
+
+  .avatar-lg {
+    width: 58px;
+    height: 58px;
+    flex-shrink: 0;
+  }
+
+  .avatar-placeholder {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #fdd6c4, #f9b8d6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--lm-primary);
+    flex-shrink: 0;
+  }
+
+  .profile-info {
+    flex: 1;
+
+    .child-name {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--lm-text);
+      margin: 0 0 2px;
+    }
+    .child-age {
+      font-size: 13px;
+      color: var(--lm-primary);
+      margin: 0 0 2px;
+      font-weight: 500;
+    }
+    .child-dob {
+      font-size: 12px;
+      color: var(--lm-muted);
+      margin: 0;
+    }
+  }
+
+  .profile-chevron {
+    font-size: 22px;
+    color: var(--lm-muted);
+  }
+}
+
+.stats-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 8px 16px 16px;
+  padding: 14px 0;
+  background: var(--lm-surface);
+  border-radius: 18px;
+  border: 0.5px solid var(--lm-border);
+
+  .stat-item {
+    flex: 1;
+    text-align: center;
+
+    .stat-value {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--lm-primary);
+    }
+    .stat-label {
+      font-size: 11px;
+      color: var(--lm-muted);
+      margin-top: 2px;
+    }
+  }
+
+  .stat-divider {
+    width: 0.5px;
+    height: 32px;
+    background: var(--lm-border);
+  }
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 16px 8px;
+
+  .section-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--lm-text);
+    margin: 0;
+  }
+
+  ion-button {
+    --color: var(--lm-primary);
+    font-size: 13px;
+  }
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 48px 32px;
+  text-align: center;
+
+  .empty-emoji {
+    font-size: 52px;
+    margin-bottom: 16px;
+  }
+
+  h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--lm-text);
+    margin: 0 0 8px;
+  }
+
+  p {
+    font-size: 14px;
+    color: var(--lm-muted);
+    margin: 0 0 24px;
+    line-height: 1.5;
+  }
+}
+
+.lm-fab {
+  --background: var(--lm-primary);
+  --background-activated: var(--lm-primary-dark);
+  --box-shadow: 0 4px 16px rgba(90, 62, 138, 0.35);
+}

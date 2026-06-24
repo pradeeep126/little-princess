@@ -1,0 +1,232 @@
+ion-toolbar {
+  --background: var(--lm-bg);
+  --border-width: 0;
+}
+
+.add-content {
+  --background: var(--lm-bg);
+}
+
+// Photo Section
+.photo-section {
+  margin: 16px;
+}
+
+.photo-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 160px;
+  border: 2px dashed var(--lm-primary-light);
+  border-radius: 18px;
+  background: var(--lm-surface);
+  cursor: pointer;
+  transition: background 0.15s;
+  gap: 8px;
+
+  &:active { background: var(--lm-bg-alt); }
+
+  ion-icon {
+    font-size: 36px;
+    color: var(--lm-primary);
+  }
+
+  p {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--lm-primary);
+    margin: 0;
+  }
+
+  span {
+    font-size: 12px;
+    color: var(--lm-muted);
+  }
+}
+
+.photo-preview-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.photo-thumb {
+  width: calc(33% - 6px);
+  aspect-ratio: 1;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  background: var(--lm-surface);
+
+  ion-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .remove-photo {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.55);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    ion-icon {
+      color: white;
+      font-size: 14px;
+    }
+  }
+}
+
+.add-more-photo {
+  width: calc(33% - 6px);
+  aspect-ratio: 1;
+  border-radius: 12px;
+  border: 2px dashed var(--lm-primary-light);
+  background: var(--lm-surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  ion-icon {
+    font-size: 28px;
+    color: var(--lm-primary);
+  }
+}
+
+// Form Section
+.form-section {
+  padding: 0 16px;
+}
+
+.form-field {
+  margin-bottom: 20px;
+}
+
+.field-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--lm-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.field-input {
+  width: 100%;
+  padding: 13px 16px;
+  font-size: 15px;
+  color: var(--lm-text);
+  background: var(--lm-surface);
+  border: 0.5px solid var(--lm-border);
+  border-radius: 12px;
+  outline: none;
+  box-sizing: border-box;
+  font-family: inherit;
+
+  &:focus {
+    border-color: var(--lm-primary);
+  }
+
+  &[type="date"] {
+    -webkit-appearance: none;
+    appearance: none;
+  }
+}
+
+.field-textarea {
+  width: 100%;
+  padding: 13px 16px;
+  font-size: 15px;
+  color: var(--lm-text);
+  background: var(--lm-surface);
+  border: 0.5px solid var(--lm-border);
+  border-radius: 12px;
+  outline: none;
+  box-sizing: border-box;
+  resize: none;
+  font-family: inherit;
+  line-height: 1.6;
+
+  &:focus {
+    border-color: var(--lm-primary);
+  }
+}
+
+.char-count {
+  text-align: right;
+  font-size: 11px;
+  color: var(--lm-muted);
+  margin-top: 4px;
+}
+
+// Category Grid
+.category-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.cat-chip {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 7px 12px;
+  border-radius: 20px;
+  border: 1px solid var(--lm-border);
+  background: var(--lm-surface);
+  cursor: pointer;
+  font-size: 12px;
+  color: var(--lm-text-secondary);
+  transition: all 0.15s;
+
+  ion-icon {
+    font-size: 14px;
+    color: var(--cat-color, var(--lm-primary));
+  }
+
+  &.selected {
+    background: var(--cat-color, var(--lm-primary));
+    border-color: var(--cat-color, var(--lm-primary));
+    color: white;
+
+    ion-icon { color: white; }
+  }
+}
+
+// Save Button
+.save-section {
+  padding: 16px 16px 0;
+}
+
+.lm-btn-primary {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  background: var(--lm-primary);
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: opacity 0.15s;
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+
+  &:active:not(:disabled) { opacity: 0.85; }
+}

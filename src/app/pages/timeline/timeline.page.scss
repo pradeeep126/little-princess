@@ -1,0 +1,131 @@
+ion-toolbar {
+  --background: var(--lm-bg);
+  --border-width: 0;
+}
+
+.timeline-content {
+  --background: var(--lm-bg);
+}
+
+.lm-searchbar {
+  --background: var(--lm-surface);
+  --border-radius: 14px;
+  --box-shadow: none;
+  --placeholder-color: var(--lm-muted);
+  --color: var(--lm-text);
+  padding: 4px 8px 8px;
+}
+
+.filter-chips {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 4px 16px 12px;
+  scrollbar-width: none;
+  &::-webkit-scrollbar { display: none; }
+}
+
+.filter-chip {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: 1px solid var(--lm-border);
+  background: var(--lm-surface);
+  font-size: 12px;
+  color: var(--lm-muted);
+  white-space: nowrap;
+  cursor: pointer;
+  flex-shrink: 0;
+
+  &.active {
+    background: var(--lm-primary);
+    border-color: var(--lm-primary);
+    color: white;
+  }
+}
+
+.year-section {
+  padding: 8px 0;
+}
+
+.year-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 16px;
+
+  .year-line {
+    flex: 1;
+    height: 0.5px;
+    background: var(--lm-border);
+  }
+
+  .year-badge {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--lm-primary);
+    background: var(--lm-surface);
+    border: 1px solid var(--lm-primary-light);
+    padding: 3px 12px;
+    border-radius: 20px;
+  }
+}
+
+.timeline-list {
+  padding: 0 16px;
+}
+
+.timeline-item {
+  display: flex;
+  gap: 0;
+  margin-bottom: 12px;
+
+  .tl-connector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 24px;
+    flex-shrink: 0;
+    padding-top: 16px;
+
+    .tl-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      border: 2px solid white;
+      box-shadow: 0 0 0 1px rgba(0,0,0,0.1);
+    }
+
+    .tl-line {
+      flex: 1;
+      width: 1.5px;
+      background: var(--lm-border);
+      margin-top: 6px;
+    }
+  }
+
+  .tl-card {
+    flex: 1;
+    min-width: 0;
+  }
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 32px;
+  text-align: center;
+
+  .empty-emoji { font-size: 52px; margin-bottom: 16px; }
+  h3 { font-size: 18px; font-weight: 600; color: var(--lm-text); margin: 0 0 8px; }
+  p { font-size: 14px; color: var(--lm-muted); margin: 0; }
+}
+
+.lm-fab {
+  --background: var(--lm-primary);
+  --box-shadow: 0 4px 16px rgba(90, 62, 138, 0.35);
+}

@@ -1,0 +1,63 @@
+// Use system fonts - no external font import needed
+* {
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overscroll-behavior: none;
+}
+
+ion-content {
+  --padding-top: 0;
+  scroll-behavior: smooth;
+}
+
+input, textarea, select {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+ion-card, ion-item {
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.ion-page {
+  animation: fadein 0.2s ease;
+}
+
+@keyframes fadein {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+::-webkit-scrollbar { display: none; }
+* { scrollbar-width: none; }
+
+ion-toolbar {
+  --padding-start: 8px;
+  --padding-end: 8px;
+}
+
+ion-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--lm-text);
+}
+
+ion-back-button {
+  --color: var(--lm-primary);
+}
+
+ion-searchbar {
+  --border-radius: 14px;
+}
+
+ion-fab-button {
+  --background: var(--lm-primary);
+  --background-hover: var(--lm-primary-dark);
+  width: 56px;
+  height: 56px;
+}

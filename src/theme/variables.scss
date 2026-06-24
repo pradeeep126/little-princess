@@ -1,0 +1,55 @@
+// Little Memories Design System
+// Core CSS Variables
+
+:root {
+  // Brand Colors
+  --lm-primary:        #5a3e8a;
+  --lm-primary-dark:   #402d64;
+  --lm-primary-light:  #c8b8e8;
+  --lm-rose:           #c060a0;
+  --lm-peach:          #d47a5a;
+
+  // Backgrounds
+  --lm-bg:             #f8f4f0;
+  --lm-bg-alt:         #f2ede8;
+  --lm-surface:        #ffffff;
+
+  // Text
+  --lm-text:           #2a1a0a;
+  --lm-text-secondary: #5a4a3a;
+  --lm-muted:          #9a8880;
+
+  // Border
+  --lm-border:         #e8e0d8;
+
+  // Shadows
+  --lm-shadow-sm:      0 2px 8px rgba(90, 62, 138, 0.08);
+  --lm-shadow-md:      0 4px 16px rgba(90, 62, 138, 0.12);
+
+  // Ionic overrides
+  --ion-background-color:        var(--lm-bg);
+  --ion-text-color:              var(--lm-text);
+  --ion-toolbar-background:      var(--lm-bg);
+  --ion-tab-bar-background:      var(--lm-surface);
+  --ion-color-primary:           var(--lm-primary);
+  --ion-color-primary-contrast:  #ffffff;
+
+  // Safe areas
+  --ion-safe-area-top:    env(safe-area-inset-top);
+  --ion-safe-area-bottom: env(safe-area-inset-bottom);
+}
+
+// Dark mode
+@media (prefers-color-scheme: dark) {
+  :root {
+    --lm-bg:         #1a1218;
+    --lm-bg-alt:     #221820;
+    --lm-surface:    #2a2028;
+    --lm-text:       #f0e8f0;
+    --lm-text-secondary: #c0b0c8;
+    --lm-muted:      #806878;
+    --lm-border:     #3a2c38;
+    --ion-background-color: var(--lm-bg);
+    --ion-text-color: var(--lm-text);
+  }
+}

@@ -1,0 +1,102 @@
+ion-toolbar { --background: var(--lm-bg); --border-width: 0; }
+.settings-content { --background: var(--lm-bg); }
+
+.settings-section { padding: 16px 16px 4px; }
+
+.section-title {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--lm-muted);
+  margin-bottom: 8px;
+  padding-left: 4px;
+}
+
+.settings-card {
+  background: var(--lm-surface);
+  border-radius: 18px;
+  border: 0.5px solid var(--lm-border);
+  overflow: hidden;
+}
+
+.settings-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px;
+  cursor: pointer;
+  transition: background 0.15s;
+  &:active { background: var(--lm-bg); }
+
+  .item-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    ion-icon { font-size: 20px; }
+  }
+
+  .item-text { flex: 1; }
+  .item-label { font-size: 15px; font-weight: 500; color: var(--lm-text); }
+  .item-hint { font-size: 12px; color: var(--lm-muted); margin-top: 2px; }
+  .item-chevron { font-size: 16px; color: var(--lm-muted); }
+}
+
+.item-divider {
+  height: 0.5px;
+  background: var(--lm-border);
+  margin-left: 68px;
+}
+
+.info-card {
+  padding: 20px;
+
+  .app-logo-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+
+    .logo-emoji { font-size: 36px; }
+    .app-name-text { font-size: 17px; font-weight: 700; color: var(--lm-primary); }
+    .app-version { font-size: 12px; color: var(--lm-muted); margin-top: 2px; }
+  }
+
+  .app-desc {
+    font-size: 14px;
+    color: var(--lm-text-secondary);
+    line-height: 1.6;
+    margin: 0 0 14px;
+  }
+
+  .made-with {
+    font-size: 12px;
+    color: var(--lm-muted);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    ion-icon { font-size: 14px; }
+  }
+}
+
+.stats-row {
+  display: flex;
+  gap: 12px;
+  padding: 8px 16px 16px;
+
+  .stat-chip {
+    flex: 1;
+    background: var(--lm-surface);
+    border: 0.5px solid var(--lm-border);
+    border-radius: 14px;
+    padding: 16px;
+    text-align: center;
+
+    .stat-n { font-size: 24px; font-weight: 700; color: var(--lm-primary); }
+    .stat-l { font-size: 11px; color: var(--lm-muted); margin-top: 3px; }
+  }
+}
