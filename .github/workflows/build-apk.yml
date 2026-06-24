@@ -32,10 +32,13 @@ jobs:
       - name: Build web assets
         run: npx ng build --configuration production
 
+      - name: Verify index.html exists in www/
+        run: ls www/ && cat www/index.html | head -3
+
       - name: Add Android platform
         run: npx cap add android || true
 
-      - name: Sync Capacitor (copy + update)
+      - name: Sync Capacitor
         run: npx cap sync android
 
       - name: Grant execute permission for gradlew
