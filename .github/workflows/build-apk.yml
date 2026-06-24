@@ -32,18 +32,17 @@ jobs:
       - name: Build web assets
         run: npx ng build --configuration production
 
-      - name: Verify www folder exists
-        run: |
-          echo "Contents of www folder:"
-          ls -la www/
-          echo "index.html exists:"
-          cat www/index.html | head -5
+      - name: Verify www output
+        run: ls -la www/
 
       - name: Add Android platform
         run: npx cap add android || true
 
-      - name: Sync Capacitor
-        run: npx cap sync android --no-build
+      - name: Copy web assets to Android
+        run: npx cap copy android
+
+      - name: Update Android plugins
+        run: npx cap update android
 
       - name: Grant execute permission for gradlew
         run: chmod +x android/gradlew
