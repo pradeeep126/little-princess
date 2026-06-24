@@ -32,17 +32,11 @@ jobs:
       - name: Build web assets
         run: npx ng build --configuration production
 
-      - name: Verify www output
-        run: ls -la www/
-
       - name: Add Android platform
         run: npx cap add android || true
 
-      - name: Copy web assets to Android
-        run: npx cap copy android
-
-      - name: Update Android plugins
-        run: npx cap update android
+      - name: Sync Capacitor (copy + update)
+        run: npx cap sync android
 
       - name: Grant execute permission for gradlew
         run: chmod +x android/gradlew
